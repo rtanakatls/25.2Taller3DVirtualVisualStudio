@@ -6,21 +6,19 @@ using System.Threading.Tasks;
 
 namespace Taller3DVirtual252.Shape
 {
-    internal class Rectangle : Shape
+    internal class Circle : Shape
     {
-        protected float b;
-        protected float h;
+        protected float radius;
+        private float pi = 3.1416f;
 
-        public Rectangle(float b, float h, string name = "Rectángulo") : base(name)
+        public Circle(float radius) : base("Círculo")
         {
-            this.b = b;
-            this.h = h;
+            this.radius = radius;
         }
 
         public override float GetArea()
         {
-            return b * h;
+            return pi * radius * radius;
         }
-
     }
 }
